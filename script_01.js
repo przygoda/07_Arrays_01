@@ -10,8 +10,8 @@ arr = ["Ich","bin","Imran"];
 
 ausgabe(arr);
 ausgabe(arr[0]);
-ausgabe(arr.length);
- */
+ausgabe(arr.length); */
+
 
 /*** 1.1 Schleifen */
 
@@ -22,8 +22,8 @@ ausgabe(arr);
 for (let i = 0; i < arr.length; i++) 
 {
     ausgabe(i + " : " + arr[i]);
-} */
-
+} 
+ */
 
  /*********   Überlegungen **********/
 
@@ -33,7 +33,7 @@ Solange die Variable existiert, bleibt dieser erhalten.
 hier: Aufsummierung
 */
 
-/*
+/* 
 let a = 0; // Anfangswert :: DRY !
 ausgabe("inhalt von a: " + a);
 a = a + 1; // a = 0 + 1
@@ -41,17 +41,17 @@ ausgabe("inhalt von a: " + a);
 a = a + 1; // a = 1 + 1
 ausgabe("inhalt von a: " + a);
 a = a + 1; // a = 2 + 1
-a*/
+ */
 
-/*
-let a = 0; // Anfangswert
+
+/* let a = 0; // Anfangswert
 for (let index = 0; index < 10; index++)
 {
-    //ausgabe("ausgabe von innen: " + a)
+    ausgabe("ausgabe von innen: " + a)
     a += 1;
 }
-ausgabe("ausgabe nach loop: " + a);
-*/
+ausgabe("ausgabe nach loop: " + a); */
+
 
 /* 
 1a. Einer Variablen kann Ihr eigener Wert zugewiesen werden
@@ -59,7 +59,7 @@ Solange die Variable existiert, bleibt dieser erhalten
 hier: Konkatenation eines Strings
 */
 
-/*
+/* 
 let str = "";
 let gap = " ";
 let addStr = "Test";
@@ -67,8 +67,8 @@ for (let index = 0; index < 10; index++)
 {
     str += addStr + gap;
 }
-ausgabe(str);
-*/
+ausgabe(str); */
+
 
 
 
@@ -89,10 +89,14 @@ function satzbauArr(arr) {
 
     for (let i = 0; i < arr.length; i++) 
     {
-        str +=  gap + arr[i];
+        if (i != (arr.length - 1)) { // noch nicht das letzte Element
+            str +=  arr[i] + gap;
+        } else {
+            str +=  arr[i] + punct;
+        }
     }                
 
-    return str + punct; 
+    return str ; 
 
 }
 
